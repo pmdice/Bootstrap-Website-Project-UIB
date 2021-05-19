@@ -1,2 +1,37 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* BORDER COLORS FOR VISUALISATION*/
+.color-cc {
+    border: solid red 3px;
+}
+
+.color-cc-black {
+    border: solid black 3px
+}
+/* Individual height for the Navbar */
+.navbar_custom_height {
+    @extend .navbar;
+    height: 80px;
+}
+
+.nav-item {
+    margin-right: 25px;
+}
+
+
+
+.navbar-btn {
+    @extend .btn;
+    width: 180px;
+    height: 55px;
+    background-color: #2EA9A7;
+    border-style: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+.btn-border-radius {
+    border-radius: 30px;
+}
