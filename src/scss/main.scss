@@ -1,5 +1,6 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../scss/mixin";
 
 /* BORDER COLORS FOR VISUALISATION*/
 .color-cc {
@@ -8,6 +9,10 @@
 
 .color-cc-black {
     border: solid black 3px
+}
+
+.color-cc-fill {
+    background-color: #D4F4ED
 }
 /* Individual height for the Navbar */
 .navbar_custom_height {
@@ -21,6 +26,8 @@
 
 
 
+
+
 .navbar-btn {
     @extend .btn;
     width: 180px;
@@ -31,7 +38,47 @@
     font-weight: 600;
 }
 
+.navbar-custom-color {
+    background-color: #d4f4ed;
+}
+
 
 .btn-border-radius {
     border-radius: 30px;
 }
+
+
+/* ? First Section */
+
+
+.container-positioning {
+    position: relative;
+    top: 75%;
+}
+
+/* ? First Section Images */
+
+.hero-img-1 {
+    @include hero-img-1
+}
+
+.hero-img-2 {
+    @include hero-img-2
+}
+
+/* ? First Section Images END */
+
+
+/* ? First Section Text */
+.section-one-h1 {
+   @include section-one-h1
+}
+
+.section-one-top-p {
+    @include section-one-top-p
+}
+
+/* ? First Section Text END */
+
+
+
