@@ -1,31 +1,25 @@
 /* ? Mixin for Hero Images */
 
 @mixin hero-img-1 {
-    background-image: url(../images/hero-l8-1.png);
-    height: 60vh;
-    background-size: cover; /* Need to fix the Picture in Photoshoo to remove the space around it / center the picture / then switch to CONTAIN */
+    background-image: url(../images/hero-img-fin.png);
+    height: 500px;
+    width: 100%;
+    background-size: contain; /* Need to fix the Picture in Photoshoo to remove the space around it / center the picture / then switch to CONTAIN */
     background-repeat: no-repeat;
-    background-position: right;
-
+    background-position: center;
+    
 
     @media (min-width: 576px) {
-        height: 90vh;
+        height: 580px;
+        
+    }
+
+    @media (min-width: 992px) {
         
     }
 }
 
-@mixin hero-img-2 {
-    background-image: url(../images/hero-l8-2.png);
-    height: 60vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* margin-top: 5vh; */
 
-    @media (min-width: 576px) {
-        height: 70vh;
-        margin-top: 10vh;
-    }
-}
 
 /* ? Mixin for Hero Images END */
 
@@ -35,12 +29,182 @@
     font-size: 1.1rem;
     font-weight: 700;
     margin-top: 15px;
+    color: white;
+
+    @media (min-width: 0) {
+        text-align: center;
+        
+    }
+
+    @media (min-width: 576px) {
+        text-align: left;
+        
+    }
     
 }
 
 @mixin section-one-h1 {
     font-weight: 600;
-    font-size: 2.2rem;
     margin-bottom: 35px;
+    color: white;
+
+    @media (min-width: 0) {
+        font-size: 1.6rem;
+        text-align: center;
+        
+    }
+    
+    @media (min-width: 576px) {
+        font-size: 1.9rem;
+        text-align: left;
+        
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2.4rem;
+        
+    }
 }
 
+@mixin section-one-p {
+    color: white;
+    margin-bottom: 50px;
+    width: 85%;
+
+    @media (min-width: 0) {
+        text-align: center;
+        font-size: 1.2rem;
+        
+    }
+
+    @media (min-width: 576px) {
+        text-align: left;
+        font-size: 1.3rem;
+        
+    }
+
+    @media (min-width:768px) {
+        font-size: 1.5rem;
+        
+    }
+}
+
+@mixin button {
+    font-size: 1.1rem;
+    border-radius: 30px;
+    padding: 20px 40px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    margin: 10px;
+
+    @media (min-width: 0) {
+        width: 180px;
+        font-size: 0.8rem;
+        
+    }
+
+    @media (min-width: 576px) {
+        width: 220px;
+        font-size: 0.9rem;
+        
+    }
+
+    @media (min-width: 992px) {
+        font-size: 1.2rem;
+        
+    }
+}
+
+/* ? CARD Section START*/
+
+
+@mixin card-form {
+    background-color: #ffffff;
+    height: 250px;
+    border-radius: 20px;
+    -webkit-box-shadow: -1px 11px 22px -3px rgba(0,0,0,0.59); 
+    box-shadow: -1px 11px 22px -3px rgba(0,0,0,0.59);
+
+    &:hover {
+        background-color: #FF7272;
+        color: white;
+    }
+    
+}
+
+.card-section-h2 {
+    font-size: 2.5rem;
+}
+
+
+/* ? CARD Section END */
+
+
+/* ? Innovation Section START */
+
+@mixin innovation-wrapper {
+    @media (min-width: 0) {
+        height: 1300px;
+        
+    }
+
+    @media (min-width: 768px) {
+        height: 950px;
+        
+    }
+
+    @media (min-width: 992px) {
+        height: 900px;
+        
+    }
+
+    @media (min-width: 1200px) {
+        height: 550px;
+        
+    }
+    
+}
+
+@mixin about-item-img-wrapper{
+    display: inline-block;
+    height: 76px;
+    width: 76px;
+    border: solid green 2px;
+    background-image: url(../images/Icon-1.png);
+    background-size: contain;
+
+    &:hover {
+        background-image: url(../images/Icon-1-hover.png);
+        background-size: contain;
+    }
+    
+}
+
+.innovation-mobile-img {
+    background-image: url(../images/innovation-mobile-mockup.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+
+}
+
+/* ? Innovation Section END */
+
+
+
+
+
+
+
+/* ? CONTENT Section START */
+
+@mixin content-mobile-img {
+    border: solid green 2px;
+    background-image: url(../images/content-mobile-img.png);
+    background-size: contain;
+    height: 550px;
+    width: 400px;
+}
+/* ? CONTENT Section END */
