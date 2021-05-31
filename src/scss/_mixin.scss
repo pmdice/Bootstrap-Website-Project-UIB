@@ -9,6 +9,13 @@
     background-position: center;
     
 
+    @media (min-width: 0) {
+        height: 480px;
+        
+    }
+
+
+
     @media (min-width: 576px) {
         height: 580px;
         
@@ -98,6 +105,8 @@
     color: white;
     margin: 10px;
 
+  
+
     @media (min-width: 0) {
         width: 180px;
         font-size: 0.8rem;
@@ -133,9 +142,7 @@
     
 }
 
-.card-section-h2 {
-    font-size: 2.5rem;
-}
+
 
 
 /* ? CARD Section END */
@@ -201,10 +208,34 @@
 /* ? CONTENT Section START */
 
 @mixin content-mobile-img {
-    border: solid green 2px;
     background-image: url(../images/content-mobile-img.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 550px;
-    width: 400px;
 }
 /* ? CONTENT Section END */
+
+/* ? Pricing Section START */
+@mixin custom-card-color {
+    background-color: #285940;
+    border-radius: 20px;
+}
+
+
+@mixin card-custom-style {
+    
+
+    @media (min-width: 0) {
+        height: 500px;
+        font-size: 2rem;
+        
+        
+    }
+}
+      
+     
+ 
+
+
+/* Princing Section END */

@@ -19,6 +19,10 @@
 .color-cc-fill {
     background-color: #265940
 }
+
+.text-color-cc-white {
+    color: white
+} 
 /* Individual height for the Navbar */
 .navbar_custom_height {
     @extend .navbar;
@@ -31,6 +35,7 @@
 
 .custom-logo-font {
     font-family: 'Sacramento', cursive;
+    font-size: 2rem
 }
 
 .navbar-btn {
@@ -106,6 +111,24 @@
     @include card-form
 }
 
+.card-section-h2 {
+    
+
+    @media (min-width: 0) {
+      font-size: 2rem;
+      font-weight: 400;  
+        
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2.3rem;
+        font-weight: 600;  
+          
+      }
+
+
+}
+
 
 /* ? CARD SECTION END */
 
@@ -157,6 +180,102 @@
 
 /* About Section START */
 
+.about-section-top-div {
+    padding-top: 30px;
+
+    @media (min-width: 0) {
+        width: 100%;
+        
+    }
+
+    @media (min-width: 768px) {
+        width: 80%;
+        
+    }
+}
+
+.about-section-p-left , .about-section-p-right{
+    width: 48%;
+    display: inline-block;
+}
+
 .content-mobile-img {
     @include content-mobile-img
 }
+
+
+
+/* ? Pricing Section START */
+
+switch input {display:none;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #285940;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #285940;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-custom-style {
+    @include card-custom-style
+}
+
+.custom-card-color {
+    @include custom-card-color
+}
+
+
+
+
+
+
+/* ? Pricing Section END */
