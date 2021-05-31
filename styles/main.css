@@ -10761,10 +10761,6 @@ textarea.form-control-lg {
 /* ? Mixin for Hero Images END */
 /* ? Mixin for Hero Text */
 /* ? CARD Section START*/
-.card-section-h2 {
-  font-size: 2.5rem;
-}
-
 /* ? CARD Section END */
 /* ? Innovation Section START */
 .innovation-mobile-img {
@@ -10778,6 +10774,8 @@ textarea.form-control-lg {
 /* ? Innovation Section END */
 /* ? CONTENT Section START */
 /* ? CONTENT Section END */
+/* ? Pricing Section START */
+/* Princing Section END */
 * {
   font-family: "Rubik", sans-serif;
 }
@@ -10795,6 +10793,10 @@ textarea.form-control-lg {
   background-color: #265940;
 }
 
+.text-color-cc-white {
+  color: white;
+}
+
 /* Individual height for the Navbar */
 .navbar_custom_height {
   height: 80px;
@@ -10806,6 +10808,7 @@ textarea.form-control-lg {
 
 .custom-logo-font {
   font-family: "Sacramento", cursive;
+  font-size: 2rem;
 }
 
 .navbar-btn {
@@ -10840,6 +10843,11 @@ textarea.form-control-lg {
   /* Need to fix the Picture in Photoshoo to remove the space around it / center the picture / then switch to CONTAIN */
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (min-width: 0) {
+  .hero-img-1 {
+    height: 480px;
+  }
 }
 @media (min-width: 576px) {
   .hero-img-1 {
@@ -10960,6 +10968,19 @@ textarea.form-control-lg {
   color: white;
 }
 
+@media (min-width: 0) {
+  .card-section-h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 768px) {
+  .card-section-h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+}
+
 /* ? CARD SECTION END */
 /* Innovation Section START */
 @media (min-width: 0) {
@@ -11029,12 +11050,106 @@ textarea.form-control-lg {
 
 /* Innovation Section END */
 /* About Section START */
-.content-mobile-img {
-  border: solid green 2px;
-  background-image: url(../images/content-mobile-img.png);
-  background-size: contain;
-  height: 550px;
-  width: 400px;
+.about-section-top-div {
+  padding-top: 30px;
 }
+@media (min-width: 0) {
+  .about-section-top-div {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .about-section-top-div {
+    width: 80%;
+  }
+}
+
+.about-section-p-left, .about-section-p-right {
+  width: 48%;
+  display: inline-block;
+}
+
+.content-mobile-img {
+  background-image: url(../images/clean-design-mockup.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 550px;
+}
+
+/* ? Pricing Section START */
+switch input {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #285940;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #285940;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (min-width: 0) {
+  .card-custom-style {
+    height: 500px;
+    font-size: 2rem;
+  }
+}
+
+.custom-card-color {
+  background-color: #285940;
+  border-radius: 20px;
+}
+
+/* ? Pricing Section END */
 
 /*# sourceMappingURL=main.css.map */
