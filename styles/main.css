@@ -10960,12 +10960,12 @@ textarea.form-control-lg {
   background-color: #ffffff;
   height: 250px;
   border-radius: 20px;
-  -webkit-box-shadow: -1px 11px 22px -3px rgba(0, 0, 0, 0.59);
-  box-shadow: -1px 11px 22px -3px rgba(0, 0, 0, 0.59);
 }
 .card-form:hover {
   background-color: #265940;
   color: white;
+  -webkit-box-shadow: -1px 11px 22px -3px rgba(0, 0, 0, 0.59);
+  box-shadow: -1px 11px 22px -3px rgba(0, 0, 0, 0.59);
 }
 
 @media (min-width: 0) {
