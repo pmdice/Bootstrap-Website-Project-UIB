@@ -1,2 +1,281 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../scss/mixin";
+@import "../fonts/fonts";
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* BORDER COLORS FOR VISUALISATION*/
+.color-cc {
+    border: solid red 3px;
+}
+
+.color-cc-black {
+    border: solid black 3px
+}
+
+.color-cc-fill {
+    background-color: #265940
+}
+
+.text-color-cc-white {
+    color: white
+} 
+/* Individual height for the Navbar */
+.navbar_custom_height {
+    @extend .navbar;
+    height: 80px;
+}
+
+.nav-item {
+    margin-right: 25px;
+}
+
+.custom-logo-font {
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem
+}
+
+.navbar-btn {
+    @extend .btn;
+    width: 180px;
+    height: 55px;
+    background-color: #2EA9A7;
+    border-style: none;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-custom-color {
+    background-color: #265940;
+}
+
+
+.btn-border-radius {
+    border-radius: 30px;
+}
+
+
+/* ? First Section */
+
+
+.container-positioning {
+    position: relative;
+    top: 75%;
+}
+
+/* ? First Section Images */
+
+.hero-img-1 {
+    @include hero-img-1
+}
+
+
+/* ? First Section Images END */
+
+
+/* ? First Section Text */
+.section-one-h1 {
+   @include section-one-h1
+}
+
+.section-one-top-p {
+    @include section-one-top-p
+}
+
+.section-one-p { 
+    @include section-one-p
+}
+
+.button-template {
+    @include button
+}
+
+.green-button {
+ background-color: #FF7272;
+}
+
+.orange-button {
+    background-color: #099A97;
+}
+
+/* ? First Section Text END */
+
+
+
+/* ? CARD SECTION START */
+
+.card-form {
+    @include card-form
+}
+
+.card-section-h2 {
+    
+
+    @media (min-width: 0) {
+      font-size: 2rem;
+      font-weight: 400;  
+        
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2.3rem;
+        font-weight: 600;  
+          
+      }
+
+
+}
+
+
+/* ? CARD SECTION END */
+
+/* Innovation Section START */
+.innovation-wrapper {
+    @include innovation-wrapper
+}
+
+
+.background-color-innovation {
+    background-color: #F2F5FB;
+}
+
+.about-items-left {
+   
+    height: 400px;
+}
+
+.about-items-container {
+    height: 100px;
+}
+
+.about-items-wrapper {
+    width: 70%;
+    display: inline-block;
+    height: 90px;
+}
+
+.about-item-img-wrapper {
+    @include about-item-img-wrapper;
+}
+
+.about-mobile-img {
+    border: solid green 2px;
+    width: 30%;
+    display: inline-block;
+}
+
+.about-items-right {
+    border: solid green 2px;
+    width: 33.33%;
+    display: inline-block;
+    height: 400px;
+}
+
+
+/* Innovation Section END */
+
+
+/* About Section START */
+
+.about-section-top-div {
+    padding-top: 30px;
+
+    @media (min-width: 0) {
+        width: 100%;
+        
+    }
+
+    @media (min-width: 768px) {
+        width: 80%;
+        
+    }
+}
+
+.about-section-p-left , .about-section-p-right{
+    width: 48%;
+    display: inline-block;
+}
+
+.content-mobile-img {
+    @include content-mobile-img
+}
+
+
+
+/* ? Pricing Section START */
+
+switch input {display:none;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #285940;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #285940;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-custom-style {
+    @include card-custom-style
+}
+
+.custom-card-color {
+    @include custom-card-color
+}
+
+
+
+
+
+
+/* ? Pricing Section END */
